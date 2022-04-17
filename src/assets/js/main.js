@@ -1,4 +1,4 @@
-$(function ($) {
+(jQuery)(function ($) {
 
 	// Mobile Nav toggle
 	$('.menu-toggle > a').on('click', function (e) {
@@ -124,17 +124,6 @@ $(function ($) {
 		})
 	});
 
-	// var priceInputMax = document.getElementById('price-max'),
-	// 	priceInputMin = document.getElementById('price-min');
-
-	// priceInputMax.addEventListener('change', function () {
-	// 	updatePriceSlider($(this).parent(), this.value)
-	// });
-
-	// priceInputMin.addEventListener('change', function () {
-	// 	updatePriceSlider($(this).parent(), this.value)
-	// });
-
 	function updatePriceSlider(elem, value) {
 		if (elem.hasClass('price-min')) {
 			console.log('min')
@@ -144,6 +133,17 @@ $(function ($) {
 			priceSlider.noUiSlider.set([null, value]);
 		}
 	}
+
+	var priceInputMax = document.getElementById('price-max'),
+		priceInputMin = document.getElementById('price-min');
+
+	priceInputMax?.addEventListener('change', function () {
+		updatePriceSlider($(this).parent(), this.value)
+	});
+
+	priceInputMin?.addEventListener('change', function () {
+		updatePriceSlider($(this).parent(), this.value)
+	});
 
 	// Price Slider
 	var priceSlider = document.getElementById('price-slider');
@@ -164,4 +164,20 @@ $(function ($) {
 		});
 	}
 
+	// Custom jQuery
+	// Create QR Code by choose payment 
+	$(".payment-method div").click(function () {
+		$(".code img").attr('src', "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + document.getElementsByClassName('input-radio')[$(this).index()]?.querySelector('input[name="payment"]').value);
+	});
+
+	// Choose navigation bar
+	$(".navbar-nav li").click(function () {
+		$("li").removeClass("active");
+		$(this).addClass("active");
+	});
+
+	// Choose cart navigation
+	$(".cart-btns a").click(function () {
+		$(".navbar-nav li").removeClass("active");
+	});
 });

@@ -7,9 +7,10 @@ import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
   {path: '', component:IndexComponent},
+  {path: 'Home', component:IndexComponent},
   {path: 'Checkout', component:CheckoutComponent},
   {path: 'Product', component:ProductComponent},
-  {path: 'Store', component:StoreComponent},
+  {path: 'Store', component:StoreComponent}
 ];
 
 @NgModule({

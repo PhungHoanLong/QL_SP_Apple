@@ -275,7 +275,7 @@ textarea.input {
   transform: scale(1);
 }
 
-.input-radio .caption, .input-checkbox .caption {
+.input-radio .code, .input-checkbox .code {
   margin-top: 5px;
   max-height: 0;
   overflow: hidden;
@@ -283,8 +283,19 @@ textarea.input {
   transition: 0.3s max-height;
 }
 
-.input-radio input[type="radio"]:checked~.caption, .input-checkbox input[type="checkbox"]:checked~.caption {
+.input-radio input[type="radio"]:checked~.code, .input-checkbox input[type="checkbox"]:checked~.code {
   max-height: 800px;
+}
+
+.input-radio .code
+{
+  max-width: 170px;
+  margin: 0px auto;
+}
+
+.input-radio .code img {
+  padding: 5px;
+  border: 1px solid black;
 }
 
 /*----------------------------*\
