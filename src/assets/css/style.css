@@ -43,8 +43,9 @@ Table OF Contents
 9 > CHECKOUT PAGE
 10 > NEWSLETTER
 11 > FOOTER
-11 > SLICK STYLE
-12 > RESPONSIVE
+12 > SLICK STYLE
+13 > RESPONSIVE
+14 > LOADING PAGE
 ------------------------------------*/
 
 /*=========================================================
@@ -2096,7 +2097,7 @@ textarea.input {
   transition: 0.2s all;
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover, .slick-next:hover {
   background-color: #D10024;
   border-color: #D10024;
 }
@@ -2115,7 +2116,7 @@ textarea.input {
 }
 
 .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-  color: #FFF;
+  color: #D10024;
 }
 
 .slick-prev {
@@ -2207,4 +2208,57 @@ textarea.input {
     float: none;
     margin-top: 10px;
   }
+}
+
+/*=========================================================
+	14 -> LOADING PAGE
+===========================================================*/
+.loading {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  animation: _backGround 5s ease infinite;
+}
+
+.loadingWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loading {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  border: transparent;
+  border-top: 3px solid #ffcb23;
+  border-radius: 50%;
+  animation: round 2s linear infinite;
+}
+
+h1 {
+  color: #555555;
+  position: relative;
+  margin: auto;
+  top: 50%;
+}
+
+
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes _backGround {
+    0%   {background-color: #222222;}
+    50%  {background-color: #555555;}
+    75%  {background-color: #444444;}
+    100% {background-color: #111111;}
+
 }

@@ -28,45 +28,26 @@
         <div class="row">
             <!-- Product main img -->
             <div class="col-md-5 col-md-push-2">
-                <div id="product-main-img">
-                    <div class="product-preview">
-                        <img src="assets/img/product01.png" alt="">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideMain"
+                    id="product-main-img">
+                    <div ngxSlickItem *ngFor="let slide of slidesMain" class="slide">
+                        <div class="product-preview">
+                            <img src="{{ slide.img }}" alt="">
+                        </div>
                     </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product03.png" alt="">
-                    </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product06.png" alt="">
-                    </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product08.png" alt="">
-                    </div>
-                </div>
+                </ngx-slick-carousel>
             </div>
             <!-- /Product main img -->
 
             <!-- Product thumb imgs -->
             <div class="col-md-2  col-md-pull-5">
-                <div id="product-imgs">
-                    <div class="product-preview">
-                        <img src="assets/img/product01.png" alt="">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideImg" id="product-imgs">
+                    <div ngxSlickItem *ngFor="let slide of slidesMain" class="slide">
+                        <div class="product-preview">
+                            <img src="{{ slide.img }}" alt="" width="100%">
+                        </div>
                     </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product03.png" alt="">
-                    </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product06.png" alt="">
-                    </div>
-
-                    <div class="product-preview">
-                        <img src="assets/img/product08.png" alt="">
-                    </div>
-                </div>
+                </ngx-slick-carousel>
             </div>
             <!-- /Product thumb imgs -->
 
@@ -111,7 +92,7 @@
                         <div class="qty-label">
                             Qty
                             <div class="input-number">
-                                <input type="number">
+                                <input type="number" value="1">
                                 <span class="qty-up">+</span>
                                 <span class="qty-down">-</span>
                             </div>
