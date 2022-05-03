@@ -11,7 +11,10 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   // Slide Product
+  //-------------------------------------------
+  // New Products
   slidesNewProducts = [
     { img: "assets/img/product01.png" },
     { img: "assets/img/product03.png" },
@@ -19,7 +22,8 @@ export class IndexComponent implements OnInit {
     { img: "assets/img/product05.png" },
     { img: "assets/img/product02.png" }
   ];
-
+  //-------------------------------------------
+  // Top Selling Products
   slidesTopSell = [
     { img: "assets/img/product09.png" },
     { img: "assets/img/product08.png" },
@@ -27,7 +31,7 @@ export class IndexComponent implements OnInit {
     { img: "assets/img/product06.png" },
     { img: "assets/img/product05.png" }
   ];
-  
+  //-------------------------------------------
   // Products Slick
   slideConfig = {
     slidesToShow: 4,
@@ -54,14 +58,14 @@ export class IndexComponent implements OnInit {
     },
     ]
   };
-
+  //-------------------------------------------
   // Products Widget Slick
   slideWidget = {
-  infinite: true,
-			autoplay: true,
-			speed: 500,
-			dots: false,
-			arrows: true,
-			appendArrows: false
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    dots: false,
+    arrows: true,
+    appendArrows: false
   }
 }

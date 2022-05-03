@@ -1256,41 +1256,22 @@ textarea.input {
 }
 
 /*-- Price Filter --*/
-
-#price-slider {
-  margin-bottom: 15px;
+.ngx-slider .ngx-slider-selection {
+  background-color: #D10024 !important;
 }
 
-.noUi-target {
-  background-color: #FFF;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid #E4E7ED;
-  border-radius: 0px;
-}
-
-.noUi-connect {
-  background-color: #D10024;
-}
-
-.noUi-horizontal {
-  height: 6px;
-}
-
-.noUi-horizontal .noUi-handle {
-  width: 12px;
-  height: 12px;
-  left: -6px;
-  top: -4px;
+.ngx-slider .ngx-slider-pointer {
+  width: 12px !important;
+  height: 12px !important;
+  top: -4px !important;
   border: none;
-  background: #D10024;
+  background: #D10024 !important;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-radius: 50%;
 }
 
-.noUi-handle:before, .noUi-handle:after {
-  display: none;
+.ngx-slider-active::after {
+  background-color: #fff !important;
 }
 
 .price-filter .input-number {
@@ -1382,15 +1363,28 @@ textarea.input {
 
 .store-pagination li:hover {
   background-color: #E4E7ED;
+}
+
+.store-pagination li:hover>a {
   color: #D10024;
 }
 
-.store-pagination li.active {
+.ngx-pagination a:hover, .ngx-pagination button:hover
+{
+  background: none !important;
+}
+
+.store-pagination li.current {
   background-color: #D10024;
   border-color: #D10024;
   color: #FFF;
   font-weight: 500;
   cursor: default;
+}
+
+.store-pagination li.pagination-next, .store-pagination li.pagination-previous
+{
+  width: 95px;
 }
 
 .store-pagination li a {
@@ -1480,6 +1474,7 @@ textarea.input {
 
 .product-preview img {
   width: 100%;
+  background-color:#DDDDDD;
 }
 
 /*----------------------------*\
@@ -2143,9 +2138,9 @@ textarea.input {
   border-radius: 50%;
 }
 
-.slick-dots li.slick-active button:before {
+/* .slick-dots li.slick-active button:before {
   background-color: #D10024;
-}
+} */
 
 .custom-dots .slick-dots {
   position: static;

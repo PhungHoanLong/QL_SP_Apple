@@ -17,19 +17,19 @@ export class ProductComponent implements OnInit {
       $input = $this.find('input[type="number"]'),
       up = $this.find('.qty-up'),
       down = $this.find('.qty-down');
-
+    //-------------------------------------------
     down.on('click', function () {
       var value = Number($input.val()) - 1;
       value = value < 1 ? 1 : value;
       $input.val(value);
     })
-
+    //-------------------------------------------
     up.on('click', function () {
       var value = Number($input.val()) + 1;
       $input.val(value);
     });
   }
-
+  //-------------------------------------------
   // Slides Product
   slidesMain = [
     { img: "assets/img/product01.png" },
@@ -37,17 +37,18 @@ export class ProductComponent implements OnInit {
     { img: "assets/img/product06.png" },
     { img: "assets/img/product08.png" }
   ];
-
+  //-------------------------------------------
   // Product Main img Slick
   slideMain = {
     infinite: true,
+    autoplay: true,
     speed: 300,
     dots: false,
     arrows: true,
     fade: true,
     asNavFor: '#product-imgs'
   }
-
+  //-------------------------------------------
   // Product imgs Slick
   slideImg = {
     slidesToShow: 3,
